@@ -4,6 +4,7 @@ let weatherContainer = $("#weather-container");
 
 function getWeather(weather){
   console.log(weather);
+  let weatherTemplate = " ";
   let currently = weather.currently;
   let temperature = currently.temperature;
   let humidity = currently.humidity;
@@ -13,8 +14,27 @@ function getWeather(weather){
   console.log( humidity);
   console.log(pressure);
   console.log(uvIndex);
-
+  weatherTemplate += `
+  <div class="col m4">
+        <div class="col m12">
+          <div class="card">
+            <div class="card-image">
+              <img src="https://lintvwkbn.files.wordpress.com/2016/03/youngstown-ohio-weather-forecast-cloudy-7.jpg">
+            </div>
+            <div class="card-content">
+              <h4> Temperatura: ${temperature}</h4>
+              <h4> Humedad: ${humidity}</h4>
+              <h4> Presión: ${pressure}</h4>
+              <h4>Rayos Uv: ${uvIndex}</h4>
+            </div>
+          </div>
+          <a class="waves-effect waves-light btn modal-trigger" data-name="" href="#modal1">Clima de la semana</a>
+        </div>
+      </div>
+  `
+  weatherContainer.append(weatherTemplate);
 }
+
 
 function weatherInfo(lat, lng){
   console.log(lat, lng);

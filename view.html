@@ -13,21 +13,13 @@
 <body>
     <div class="container">
         <h1 class="blue-text center">Dark Sky App</h1>
-            <form id="search-form">
-                    <h4>Conoce el clima de tu ciudad</h4>
-                    <input id="city" class="" type="text" name="" value="" required>
-                    <!-- <label for="number">Numero</label>
-                    <input id="number" class="" type="text" name="" value="" required>
-                    <label for="distrit">Colonia</label>
-                    <input id="distrit" class="" type="text" name="" value="" required>
-                    <label for="postal">Código Postal</label>
-                    <input id="postal" class="" type="text" name="" value="" required>-->
-                    <input id="submit-btn"type="submit" class="waves-effect waves-light btn blue" value="enviar">
-            </form>
-
-      <section id="weather-container"></section>
-      <br>
-      <section id="weather-container-week"></section>
+      <section id="weather-container-week">
+        <div id="day"> Day: ${unixDateToCurrentDate(day.time)}</div>
+        <div id="icon"> Icon: ${day.icon}</div>
+        <div id="higt-temperature"> Hight Temperature:${day.temperatureHigh}</div>
+        <div id="min-temperature"> Min temperature: ${day.temperatureMin}</div>
+        <br>
+      </section>
     </div>
 
     <script
@@ -35,6 +27,6 @@
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
- <script type="text/javascript" src="js/app.js"></script>
+ <script type="text/javascript" src="js/app1.js"></script>
 </body>
 </html>
